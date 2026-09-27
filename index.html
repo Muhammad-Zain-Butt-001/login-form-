@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Modern registration form with JavaScript validation"
+    >
+
+    <title>Create Account | Form Validation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <section class="form-wrapper">
+
+            <!-- Left Information Panel -->
+            <div class="info-panel">
+
+                <div class="brand">
+                    <div class="brand-icon">F</div>
+                    <span>Formify</span>
+                </div>
+
+                <div class="info-content">
+                    <p class="eyebrow">PROJECT 04</p>
+
+                    <h1>
+                        Create your
+                        <span>account.</span>
+                    </h1>
+
+                    <p class="info-text">
+                        Build your account with a secure and user-friendly
+                        registration experience.
+                    </p>
+
+                    <div class="features">
+
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h3>Secure validation</h3>
+                                <p>Every field is checked before submission.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h3>Clear feedback</h3>
+                                <p>Helpful messages guide you through the form.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h3>Accessible design</h3>
+                                <p>ARIA attributes improve accessibility.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="info-footer">
+                    <span>Frontend Development</span>
+                    <span>•</span>
+                    <span>JavaScript</span>
+                </div>
+
+            </div>
+
+
+            <!-- Form Panel -->
+            <div class="form-panel">
+
+                <div class="form-header">
+
+                    <div class="mobile-brand">
+                        <div class="brand-icon">F</div>
+                        <span>Formify</span>
+                    </div>
+
+                    <p class="form-label">GET STARTED</p>
+
+                    <h2>Create your account</h2>
+
+                    <p>
+                        Enter your information below to get started.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="registrationForm"
+                    novalidate
+                >
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">👤</span>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="e.g. Muhammad Zain"
+                                autocomplete="name"
+                                aria-describedby="fullName-error"
+                                aria-invalid="false"
+                            >
+
+                        </div>
+
+                        <span
+                            id="fullName-error"
+                            class="error-message"
+                            aria-live="polite"
+                        ></span>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">✉</span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                aria-describedby="email-error"
+                                aria-invalid="false"
+                            >
+
+                        </div>
+
+                        <span
+                            id="email-error"
+                            class="error-message"
+                            aria-live="polite"
+                        ></span>
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">🔒</span>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a strong password"
+                                autocomplete="new-password"
+                                aria-describedby="password-error password-strength"
+                                aria-invalid="false"
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="password"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                        <div
+                            id="password-strength"
+                            class="password-strength"
+                        ></div>
+
+                        <span
+                            id="password-error"
+                            class="error-message"
+                            aria-live="polite"
+                        ></span>
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">🔐</span>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Enter your password again"
+                                autocomplete="new-password"
+                                aria-describedby="confirmPassword-error"
+                                aria-invalid="false"
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="confirmPassword"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                        <span
+                            id="confirmPassword-error"
+                            class="error-message"
+                            aria-live="polite"
+                        ></span>
+
+                    </div>
+
+
+                    <!-- Terms -->
+                    <div class="terms-area">
+
+                        <div class="checkbox-row">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                aria-describedby="terms-error"
+                                aria-invalid="false"
+                            >
+
+                            <label for="terms">
+                                I agree to the
+                                <a href="#" id="termsLink">
+                                    Terms & Conditions
+                                </a>
+                            </label>
+
+                        </div>
+
+                        <span
+                            id="terms-error"
+                            class="error-message"
+                            aria-live="polite"
+                        ></span>
+
+                    </div>
+
+
+                    <!-- Form Feedback -->
+                    <div
+                        id="form-feedback"
+                        class="form-feedback"
+                        aria-live="polite"
+                        aria-atomic="true"
+                        role="status"
+                    ></div>
+
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        <span class="btn-text">
+                            Create Account
+                        </span>
+
+                        <span class="btn-arrow">
+                            →
+                        </span>
+                    </button>
+
+                </form>
+
+
+                <!-- Bottom -->
+                <p class="form-footer">
+                    Already have an account?
+                    <a href="#">Sign in</a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
